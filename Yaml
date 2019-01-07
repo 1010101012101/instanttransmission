@@ -1,0 +1,114 @@
+Travis
+Blog
+ 
+Docs
+ Menu
+
+Search the docs
+Getting Started
+Core Concepts for Beginners
+Travis CI Tutorial
+Customizing the Build
+Speeding up the Build
+Using Docker in your Build
+Headless Testing with Browsers
+Building Pull Requests
+Cron Jobs
+Common Build Problems
+Command Line Client
+Jobs, Builds, Matrices and Stages
+Installing Dependencies
+Programming Languages
+Deployments and Uploads
+CI Environment Reference
+Encrypting Files and Data
+Integrations and Notifications
+Developer Program
+Travis CI Enterprise
+This documentation site is open source. The README in our Git repository explains how to contribute.
+
+Improve this page on GitHub
+Travis CI Tutorial
+PREREQUISITES
+TO GET STARTED WITH TRAVIS CI
+SELECTING A DIFFERENT PROGRAMMING LANGUAGE
+MORE THAN RUNNING TESTS
+FURTHER READING
+This is a very short guide to using Travis CI with your GitHub hosted code repository. If you’re new to continuous integration or would like some more information on what Travis CI does, start with Core Concepts for Beginners instead.
+
+Prerequisites #
+To start using Travis CI, make sure you have:
+
+A GitHub account.
+Owner permissions for a project hosted on GitHub.
+To get started with Travis CI #
+Go to Travis-ci.com and Sign up with GitHub.
+Accept the Authorization of Travis CI. You’ll be redirected to GitHub.
+Click the green Activate button, and select the repositories you want to use with Travis CI.
+Add a .travis.yml file to your repository to tell Travis CI what to do. The following example specifies a Ruby project that should be built with Ruby 2.2 and the latest versions of JRuby.
+language: ruby
+rvm:
+ - 2.2
+ - jruby
+YAML
+The defaults for Ruby projects are bundle install to install dependencies, and rake to build the project.
+Add the .travis.yml file to git, commit and push, to trigger a Travis CI build:
+Travis only runs builds on the commits you push after you’ve added a .travis.yml file.
+
+Check the build status page to see if your build passes or fails, according to the return status of the build command by visiting the Travis CI and selecting your repository.
+Selecting a different programming language #
+Use one of these common languages:
+
+language: ruby
+YAML
+language: java
+YAML
+language: node_js
+YAML
+language: python
+YAML
+language: php
+YAML
+If you have tests that need to run on macOS, or your project uses Swift or Objective-C, use our OS X environment:
+
+os: osx
+YAML
+You do not necessarily need to use OS X if you develop on a Mac. OS X is required only if you need Swift, Objective-C or other macOS-specific software.
+
+Travis CI supports many programming languages.
+
+More than running tests #
+Travis CI isn’t just for running tests, there are many others things you can do with your code:
+
+deploy to GitHub pages
+run apps on Heroku
+upload RubyGems
+send notifications
+Further Reading #
+Read more about
+
+customizing your build
+security best practices
+build stages
+build matrixes
+installing dependencies
+setting up databases
+©TRAVIS CI, GMBH
+Rigaer Straße 8
+10247 Berlin, Germany
+Work with Travis CI
+HELP
+Documentation
+Changelog
+Blog
+Email
+Twitter
+LEGAL
+Imprint
+Terms of Service
+Refund Policy
+Data Processing Agreement
+Privacy Policy
+Security Statement
+TRAVIS CI STATUS
+Status: Travis CI Status
